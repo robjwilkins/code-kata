@@ -7,7 +7,13 @@ const
     chopper = require('./../chop.js');
 
 exports.testChopper = function(test) {
-    test.expect(1);
+    test.expect(7);
     test.equal(chopper.indexOf(theList, 15), 14);
+    test.equal(chopper.indexOf(theList, 1), 0);
+    test.equal(chopper.indexOf(theList, 2), 1);
+    test.equal(chopper.indexOf(theList, 0), 0);
+    test.equal(chopper.indexOf(theList, 19), 18);
+    test.equal(chopper.indexOf(theList, 20), 19);
+    test.equal(chopper.indexOf(theList, 21), 19);
     test.done();
 }

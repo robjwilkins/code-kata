@@ -10,10 +10,16 @@ recurse = function(lowerBound, upperBound, list, target) {
   //console.log("candidate: " + candidate + ", index: " + index + ", lowerBound: " + lowerBound + ", upperBound: " + upperBound);
   if (target === candidate) {
     return index;
-  }else if (target > candidate) {
+  } else if (target > candidate) {
     lowerBound = index;
-  }else if (target < candidate) {
+    if (lowerBound === upperBound-1) {
+        return upperBound;
+    }
+  } else {
     upperBound = index;
+    if (upperBound === 1) {
+        return 0;
+    }
   }
   return recurse(lowerBound, upperBound, list, target);
 }
@@ -25,4 +31,6 @@ indexOf = function(list, target) {
 
 }
 exports.indexOf = indexOf;
+var theList = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+console.log(indexOf(theList, 20));
 
