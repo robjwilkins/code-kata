@@ -1,0 +1,8 @@
+{
+    "name": "node-tutorials",
+    "version": "1.0.0-SNAPSHOT",
+    "private": true,
+    "dependencies": {
+    "debug": "~2.2.0"
+    }
+}
