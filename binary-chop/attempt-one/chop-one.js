@@ -4,9 +4,10 @@
  * searches the list by splitting it in half such that each recusion halves the number of possible matches
  */
 
-recurse = function(lowerBound, upperBound, list, target) {
-  var index = Math.round((upperBound - lowerBound)/2)+lowerBound;
-  var candidate = list[index];
+let recurse = function(lowerBound, upperBound, list, target) {
+  let
+      index = Math.round((upperBound - lowerBound)/2)+lowerBound,
+      candidate = list[index];
   if (target === candidate) {
     return index;
   } else if (target > candidate) {
@@ -29,11 +30,12 @@ recurse = function(lowerBound, upperBound, list, target) {
     }
   }
   return recurse(lowerBound, upperBound, list, target);
-}
+};
 
 exports.indexOf = function(list, target) {
-  var lowerBound = 0;
-  var upperBound = list.length - 1;
+  let
+      lowerBound = 0,
+      upperBound = list.length - 1;
   return recurse(lowerBound, upperBound, list, target);
 
-}
+};
