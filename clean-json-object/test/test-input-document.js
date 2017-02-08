@@ -11,7 +11,8 @@ exports.testDocument = {
           }
         },
         "child4": [],
-        "child5": [{}]
+        "child5": [{}],
+        "child6": 123456
       }
     }
   };

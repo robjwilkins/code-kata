@@ -6,17 +6,20 @@ isEmpty = function (obj) {
     if (obj.length >= 0) {
         return false;
     }
-       return true;
+    if (JSON.stringify(obj) != JSON.stringify({})) {
+        return false;
+    }
+    return true;
 }
 
 clean = function (obj) {
     'use strict';
     for (var prop in obj) {
         if (typeof obj[prop] === 'object') {
-          clean(obj[prop]);
+            clean(obj[prop]);
         }
-        if (obj[prop] == null || isEmpty(obj[prop])) {
-          delete obj[prop];
+        if (obj[prop] === null || obj[prop] === undefined || isEmpty(obj[prop])) {
+            delete obj[prop];
         }
     }
     return obj;
