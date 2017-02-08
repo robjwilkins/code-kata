@@ -1,11 +1,5 @@
 isEmpty = function (obj) {
     'use strict';
-    for (var prop in obj) {
-        return false;
-    }
-    if (obj.length >= 0) {
-        return false;
-    }
     if (JSON.stringify(obj) != JSON.stringify({})) {
         return false;
     }
