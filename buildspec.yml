@@ -10,10 +10,10 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - npm test --prefix text-sort
+      - npm test --prefix text-sort > build.log
   post_build:
     commands:
       - echo Build completed on `date`
 artifacts:
   files:
-    - echo none
+    - build.log
