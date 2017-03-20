@@ -32,10 +32,12 @@ let recurse = function(lowerBound, upperBound, list, target) {
   return recurse(lowerBound, upperBound, list, target);
 };
 
-exports.indexOf = function(list, target) {
+function indexOf(list, target) {
   let
       lowerBound = 0,
       upperBound = list.length - 1;
   return recurse(lowerBound, upperBound, list, target);
 
-};
+}
+
+exports.indexOf = indexOf;

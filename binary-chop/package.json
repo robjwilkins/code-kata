@@ -1,0 +1,20 @@
+{
+  "name": "binary-chop",
+  "version": "1.0.0",
+  "description": "Binary chop code kata",
+  "scripts": {
+    "eslint": "eslint .",
+    "test": "mocha"
+  },
+  "repository": "git@github.com/robjwilkins/code-kata.git",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@types/mocha": "^2.2.33",
+    "@types/node": "^6.0.47",
+    "@types/should": "^8.1.30",
+    "mocha": "3.2.0",
+    "should": "^11.2.0",
+    "typescript": "^2.2.1"
+  }
+}

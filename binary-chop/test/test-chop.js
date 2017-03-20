@@ -1,7 +1,7 @@
 /**
- * Created by robinwilkins on 03/02/2017.
+ *
+ * Test the chop using node-unit
  */
-
 const
     theList = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],
     chopperOne = require('./../attempt-one/chop-one.js'),
@@ -18,7 +18,7 @@ exports.testChopperOne = function(test) {
     test.equal(chopperOne.indexOf(theList, 21), -1);
     test.equal(chopperTwo.indexOf(theList, 12), 11);
     test.done();
-}
+};
 
 exports.testChopperTwo = function(test) {
     //test.expect(8);
@@ -32,4 +32,4 @@ exports.testChopperTwo = function(test) {
     test.equal(chopperTwo.indexOf(theList, 12), 11);
     test.equal(chopperTwo.indexOf(theList, 9), 8);
     test.done();
-}
+};
